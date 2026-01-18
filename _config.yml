@@ -23,12 +23,12 @@ repository               : "tkn132/tkn132.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Dark_trooper.jpeg"
+  avatar           : "Dark_trooper.png"
   name             : "Kim Ngan Tran"
   pronouns         : # example: "she/her"  
   bio              : "Computational population genomics for human diversity and disease"
   location         : "Brisbane, Australia"
-  employer         : "Queensland University of Technology"
+  employer         : "QUT"
   uri              : #""
   email            : "tkngan132@gmail.com" 
 
