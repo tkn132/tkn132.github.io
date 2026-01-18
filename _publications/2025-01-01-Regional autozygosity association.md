@@ -2,7 +2,7 @@
 title: "Regional autozygosity association with albumin-to-creatinine ratio reveals a novel FTO region in an Indigenous Australian population"
 collection: publications
 category: manuscripts
-permalink: /publication/2009-10-01-fto-autozygosity
+permalink: "Regional autozygosity association with albumin-to-creatinine ratio reveals a novel FTO region in an Indigenous Australian population"
 excerpt: "Regional autozygosity mapping identifies a novel FTO locus associated with albumin-to-creatinine ratio in an Indigenous Australian population."
 date: 2025-01-01
 venue: "European Journal of Human Genetics"
