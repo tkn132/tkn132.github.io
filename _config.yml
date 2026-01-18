@@ -26,14 +26,14 @@ author:
   avatar           : "Dark_trooper.jpeg"
   name             : "Kim Ngan Tran"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoc"
+  bio              : "Computational population genomics for human diversity and disease"
   location         : "Brisbane, Australia"
   employer         : "Queensland University of Technology"
-  uri              : https://www.qut.edu.au/about/our-people/academic-profiles/k23.tran
+  uri              : #""
   email            : "tkngan132@gmail.com" 
 
   # Academic websites
-  academia         : # URL
+  academia         : "https://www.qut.edu.au/about/our-people/academic-profiles/k23.tran"
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=_CNwEOoAAAAJ&hl=en"
   inspire-hep      : # URL
@@ -51,13 +51,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/tkn132/"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
