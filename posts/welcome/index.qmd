@@ -1,0 +1,28 @@
+---
+title: "Welcome to Genomics with Ngan"
+date: "2026-06-12"
+description: "What this blog is, who it's for, and what you can expect to find here."
+categories: [meta]
+image: "banner.png"
+---
+
+This blog is my attempt to write publicly about the things I spend my days thinking about: population genetics, statistical genomics, and the challenge of understanding human genetic diversity in all its complexity.
+
+## What you'll find here
+
+A few times a month I plan to post:
+
+- **Methods tutorials** — walkthroughs of tools like PLINK, ADMIXTURE, VCFtools, and SMC++ with real code and real output. The kind of post I wish had existed when I was learning.
+- **Paper commentary** — my read on new preprints and publications in the pop-gen space. What's interesting, what's novel, what I'm skeptical about.
+- **Analysis walkthroughs** — worked examples using R, usually including the actual code blocks so you can follow along or adapt them to your own data.
+- **Opinion pieces** — occasional longer-form thoughts on where the field is heading, equity in genomics research, and what it means to do population genetics responsibly with underrepresented groups.
+
+## Who this is for
+
+Broadly: scientists and students who are curious about population genetics but aren't necessarily specialists. I'll assume you're comfortable with basic genetics and statistics, but I'll try to explain the population-genetics-specific concepts rather than assuming everyone has read Hartl & Clark cover to cover.
+
+## A note on the research
+
+My work focuses mainly on Indigenous Australian and Southeast Asian populations — groups that are genomically understudied relative to their diversity and their disease burden. A lot of standard pop-gen methods were developed and validated on European-ancestry cohorts. Understanding where they work, where they break down, and how to do better is one of the central questions I keep coming back to.
+
+More soon.

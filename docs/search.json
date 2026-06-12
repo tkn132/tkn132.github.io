@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Genomics with Ngan",
+    "section": "",
+    "text": "Welcome to Genomics with Ngan\n\n\n\nmeta\n\n\n\nWhat this blog is, who it’s for, and what you can expect to find here.\n\n\n\n\n\nJun 12, 2026\n\n2 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "A full list is available on my Google Scholar profile."
+  },
+  {
+    "objectID": "publications/index.html#journal-articles",
+    "href": "publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "Journal Articles",
+    "text": "Journal Articles\n\n\nNew composite phenotypes enhance chronic kidney disease classification and genetic associations\nPLOS Genetics, 2025\nTran KN, Sutherland HG, Mallett AJ, Griffiths LR, Lea RA, et al.\n\nPaper Download PDF\n\n\n\n\nRegional autozygosity association with albumin-to-creatinine ratio in an Indigenous Australian population\nEuropean Journal of Human Genetics, 2025\nArunachalam V, Tran KN, Hoy W, Lea RA, Nagaraj SH, et al.\n\nPaper\n\n\n\nAdd new publications by editing publications/index.qmd — no rebuild required beyond a standard quarto render."
+  },
+  {
+    "objectID": "markdown_generator/OrcidToBib.html",
+    "href": "markdown_generator/OrcidToBib.html",
+    "title": "Genomics with Ngan",
+    "section": "",
+    "text": "orcid = '0000-0000-0000-0000' # Fill your orcid here\n\n\nimport requests\n\nWe use the /works api to list all works related to the orcid. This gives a summary of all works, so citation information is not included. We collect the put-code of all works to retrieve the citation information later.\n\nresponse = requests.get('https://pub.orcid.org/v3.0/{}/works'.format(orcid),\n                        headers={\"Accept\": \"application/orcid+json\" })\nrecord = response.json()\n\n\nput_codes = []\nfor work in record['group']:\n    put_code = work['work-summary'][0]['put-code']\n    put_codes.append(put_code)\nput_code = put_codes[0]\n\nWe use the /&lt;orcid&gt;/work/&lt;put-code&gt; endpoint to retrieve the citation information for each record.\n\ncitations = []\nfor put_code in put_codes:\n    response = requests.get('https://pub.orcid.org/v3.0/{}/work/{}'.format(orcid, put_code),\n                            headers={\"Accept\": \"application/orcid+json\" })\n    work = response.json()\n    if work['citation'] is not None:\n        citations.append(work['citation']['citation-value'])\n\n\nwith open('output.bib', 'w') as bibfile:\n    for citation in citations:\n        bibfile.write(citation)\n        bibfile.write('\\n')"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome to Genomics with Ngan",
+    "section": "",
+    "text": "This blog is my attempt to write publicly about the things I spend my days thinking about: population genetics, statistical genomics, and the challenge of understanding human genetic diversity in all its complexity."
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-youll-find-here",
+    "href": "posts/welcome/index.html#what-youll-find-here",
+    "title": "Welcome to Genomics with Ngan",
+    "section": "What you’ll find here",
+    "text": "What you’ll find here\nA few times a month I plan to post:\n\nMethods tutorials — walkthroughs of tools like PLINK, ADMIXTURE, VCFtools, and SMC++ with real code and real output. The kind of post I wish had existed when I was learning.\nPaper commentary — my read on new preprints and publications in the pop-gen space. What’s interesting, what’s novel, what I’m skeptical about.\nAnalysis walkthroughs — worked examples using R, usually including the actual code blocks so you can follow along or adapt them to your own data.\nOpinion pieces — occasional longer-form thoughts on where the field is heading, equity in genomics research, and what it means to do population genetics responsibly with underrepresented groups."
+  },
+  {
+    "objectID": "posts/welcome/index.html#who-this-is-for",
+    "href": "posts/welcome/index.html#who-this-is-for",
+    "title": "Welcome to Genomics with Ngan",
+    "section": "Who this is for",
+    "text": "Who this is for\nBroadly: scientists and students who are curious about population genetics but aren’t necessarily specialists. I’ll assume you’re comfortable with basic genetics and statistics, but I’ll try to explain the population-genetics-specific concepts rather than assuming everyone has read Hartl & Clark cover to cover."
+  },
+  {
+    "objectID": "posts/welcome/index.html#a-note-on-the-research",
+    "href": "posts/welcome/index.html#a-note-on-the-research",
+    "title": "Welcome to Genomics with Ngan",
+    "section": "A note on the research",
+    "text": "A note on the research\nMy work focuses mainly on Indigenous Australian and Southeast Asian populations — groups that are genomically understudied relative to their diversity and their disease burden. A lot of standard pop-gen methods were developed and validated on European-ancestry cohorts. Understanding where they work, where they break down, and how to do better is one of the central questions I keep coming back to.\nMore soon."
+  },
+  {
+    "objectID": "markdown_generator/readme.html",
+    "href": "markdown_generator/readme.html",
+    "title": "Jupyter notebook markdown generator",
+    "section": "",
+    "text": "Jupyter notebook markdown generator\nThese .ipynb files are Jupyter notebook files that convert a TSV containing structured data about talks (talks.tsv) or presentations (presentations.tsv) into individual markdown files that will be properly formatted for the academicpages template. The notebooks contain a lot of documentation about the process. The .py files are pure python that do the same things if they are executed in a terminal, they just don’t have pretty documentation."
+  },
+  {
+    "objectID": "talkmap_out.html",
+    "href": "talkmap_out.html",
+    "title": "Leaflet cluster map of talk locations",
+    "section": "",
+    "text": "Assuming you are working in a Linux or Windows Subsystem for Linux environment, you may need to install some dependencies. Assuming a clean installation, the following will be needed:\nsudo apt install jupyter\nsudo apt install python3-pip\npip install python-frontmatter getorg --upgrade\nAfter which you can run this from the _talks/ directory, via:\n jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb\nThe _talks/ directory contains .md files of all your talks. This scrapes the location YAML field from each .md file, geolocates it with geopy/Nominatim, and uses the getorg library to output data, HTML, and Javascript for a standalone cluster map.\n\n# Start by installing the dependencies\n!pip install python-frontmatter getorg --upgrade\nimport frontmatter\nimport glob\nimport getorg\nfrom geopy import Nominatim\nfrom geopy.exc import GeocoderTimedOut\n\nCollecting python-frontmatter\n  Downloading python_frontmatter-1.1.0-py3-none-any.whl.metadata (4.1 kB)\nRequirement already satisfied: getorg in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (0.3.1)\nRequirement already satisfied: PyYAML in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from python-frontmatter) (6.0.3)\nRequirement already satisfied: geopy in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from getorg) (2.4.1)\nRequirement already satisfied: pygithub in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from getorg) (2.8.1)\nRequirement already satisfied: retrying in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from getorg) (1.4.2)\nRequirement already satisfied: geographiclib&lt;3,&gt;=1.52 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from geopy-&gt;getorg) (2.1)\nRequirement already satisfied: pynacl&gt;=1.4.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pygithub-&gt;getorg) (1.6.2)\nRequirement already satisfied: requests&gt;=2.14.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pygithub-&gt;getorg) (2.32.5)\nRequirement already satisfied: pyjwt&gt;=2.4.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pyjwt[crypto]&gt;=2.4.0-&gt;pygithub-&gt;getorg) (2.10.1)\nRequirement already satisfied: typing-extensions&gt;=4.5.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pygithub-&gt;getorg) (4.15.0)\nRequirement already satisfied: urllib3&gt;=1.26.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pygithub-&gt;getorg) (2.6.2)\nRequirement already satisfied: cryptography&gt;=3.4.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from pyjwt[crypto]&gt;=2.4.0-&gt;pygithub-&gt;getorg) (46.0.3)\nRequirement already satisfied: cffi&gt;=2.0.0 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from cryptography&gt;=3.4.0-&gt;pyjwt[crypto]&gt;=2.4.0-&gt;pygithub-&gt;getorg) (2.0.0)\nRequirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from cffi&gt;=2.0.0-&gt;cryptography&gt;=3.4.0-&gt;pyjwt[crypto]&gt;=2.4.0-&gt;pygithub-&gt;getorg) (2.23)\nRequirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from requests&gt;=2.14.0-&gt;pygithub-&gt;getorg) (3.4.4)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from requests&gt;=2.14.0-&gt;pygithub-&gt;getorg) (3.11)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (from requests&gt;=2.14.0-&gt;pygithub-&gt;getorg) (2025.11.12)\nDownloading python_frontmatter-1.1.0-py3-none-any.whl (9.8 kB)\nInstalling collected packages: python-frontmatter\nSuccessfully installed python-frontmatter-1.1.0\nIywidgets and ipyleaflet support disabled. You must be in a Jupyter notebook to use this feature.\nError raised:\nNo module named 'ipyleaflet'\nCheck that you have enabled ipyleaflet in Jupyter with:\n    jupyter nbextension enable --py ipyleaflet\n\n\n\n# Collect the Markdown files\ng = glob.glob(\"_talks/*.md\")\n\n\n# Set the default timeout, in seconds\nTIMEOUT = 5\n\n# Prepare to geolocate\ngeocoder = Nominatim(user_agent=\"academicpages.github.io\")\nlocation_dict = {}\nlocation = \"\"\npermalink = \"\"\ntitle = \"\"\n\nIn the event that this times out with an error, double check to make sure that the location is can be properly geolocated.\n\n# Perform geolocation\nfor file in g:\n    # Read the file\n    data = frontmatter.load(file)\n    data = data.to_dict()\n\n    # Press on if the location is not present\n    if 'location' not in data:\n        continue\n\n    # Prepare the description\n    title = data['title'].strip()\n    venue = data['venue'].strip()\n    location = data['location'].strip()\n    description = f\"{title}&lt;br /&gt;{venue}; {location}\"\n\n    # Geocode the location and report the status\n    try:\n        location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)\n        print(description, location_dict[description])\n    except ValueError as ex:\n        print(f\"Error: geocode failed on input {location} with message {ex}\")\n    except GeocoderTimedOut as ex:\n        print(f\"Error: geocode timed out on input {location} with message {ex}\")\n    except Exception as ex:\n        print(f\"An unhandled exception occurred while processing input {location} with message {ex}\")\n\nConference Proceeding talk 3 on Relevant Topic in Your Field&lt;br /&gt;Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA Los Angeles, Los Angeles County, California, United States\nTalk 2 on Relevant Topic in Your Field&lt;br /&gt;London School of Testing; London, UK Greater London, England, United Kingdom\nTutorial 1 on Relevant Topic in Your Field&lt;br /&gt;UC-Berkeley Institute for Testing Science; Berkeley, CA, USA Berkeley, Alameda County, California, United States\nTalk 1 on Relevant Topic in Your Field&lt;br /&gt;UC San Francisco, Department of Testing; San Francisco, CA, USA San Francisco, California, United States\n\n\n\n# Save the map\nm = getorg.orgmap.create_map_obj()\ngetorg.orgmap.output_html_cluster_map(location_dict, folder_name=\"talkmap\", hashed_usernames=False)\n\n'Written map to talkmap/'"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "Email\n      \n      \n         Google Scholar\n      \n      \n         ORCID\n      \n      \n         GitHub\n      \n      \n         LinkedIn\n      \n      \n         Download CV\n      \n    \n  \n  \n    Kim Ngan Tran\n    Computational population geneticist · Brisbane, Australia\n\n    I work at the intersection of population genetics, statistical genomics, and human health — with a particular focus on understanding how genetic diversity shapes disease risk across populations that have historically been underrepresented in genomic research.\n\n    My research uses large-scale genomic data to study population structure, runs of homozygosity, autozygosity, and complex trait architecture in Indigenous Australian and Southeast Asian populations. I'm interested in both the methods and the biology: how do we build tools that work equitably across diverse human populations, and what do those populations tell us about the evolutionary and demographic forces that shaped human genetic variation?\n\n    This blog is where I think out loud about population genetics — methods tutorials, paper commentary, analysis walkthroughs, and occasional opinion pieces. The intended audience is curious scientists and students who want to understand what the field is actually doing.\n\n    Research interests\n    \n      Population structure\n      Autozygosity & ROH\n      GWAS in diverse populations\n      Admixture\n      Indigenous genomics\n      Demographic inference\n    \n\n    Affiliations\n    Queensland University of Technology (QUT) · Brisbane, Australia"
+  }
+]

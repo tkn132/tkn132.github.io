@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Genomics with Ngan"
+  description: "Computational population genomics for human diversity and disease"
+  site-url: "https://tkn132.github.io"
+  favicon: "assets/favicon.ico"
+
+  navbar:
+    left:
+      - text: "Blog"
+        href: index.qmd
+      - text: "About"
+        href: about/index.qmd
+      - text: "Publications"
+        href: publications/index.qmd
+      - text: "CV"
+        href: assets/cv.pdf
+    right:
+      - icon: github
+        href: https://github.com/tkn132
+        aria-label: GitHub
+      - icon: mortarboard-fill
+        href: https://scholar.google.com
+        aria-label: Google Scholar
+      - icon: person-badge
+        href: https://orcid.org
+        aria-label: ORCID
+
+  page-footer:
+    left: "© 2026 Kim Ngan Tran"
+    right:
+      - text: "RSS"
+        href: index.xml
+      - text: "GitHub"
+        href: https://github.com/tkn132
+
+format:
+  html:
+    theme: [flatly, assets/custom.scss]
+    css: assets/custom.css
+    toc: false
+    link-external-icon: false
+    link-external-newwindow: true

@@ -1,0 +1,15 @@
+---
+title: "Genomics with Ngan"
+subtitle: "Computational population genomics · human diversity · disease"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, description, categories, reading-time]
+  feed: true
+page-layout: full
+title-block-banner: false
+---

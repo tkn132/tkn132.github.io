@@ -1,0 +1,39 @@
+---
+title: "Publications"
+toc: false
+---
+
+A full list is available on my [Google Scholar profile](https://scholar.google.com){target="_blank"}.
+
+## Journal Articles
+
+---
+
+### New composite phenotypes enhance chronic kidney disease classification and genetic associations
+
+*PLOS Genetics*, 2025
+
+Tran KN, Sutherland HG, Mallett AJ, Griffiths LR, Lea RA, *et al.*
+
+::: pub-links
+[Paper](https://doi.org/10.1371/journal.pgen.XXXXXXX){.pub-btn target="_blank"}
+[Download PDF](assets/tran2025_ckd.pdf){.pub-btn}
+:::
+
+---
+
+### Regional autozygosity association with albumin-to-creatinine ratio in an Indigenous Australian population
+
+*European Journal of Human Genetics*, 2025
+
+Arunachalam V, Tran KN, Hoy W, Lea RA, Nagaraj SH, *et al.*
+
+::: pub-links
+[Paper](https://doi.org/10.1038/s41431-025-XXXXX){.pub-btn target="_blank"}
+:::
+
+---
+
+::: {.pubs-note}
+*Add new publications by editing `publications/index.qmd` — no rebuild required beyond a standard `quarto render`.*
+:::

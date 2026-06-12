@@ -1,0 +1,56 @@
+---
+title: "About"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="about-grid">
+  <div class="about-photo-col">
+    <img src="profile.jpg" alt="Kim Ngan Tran" class="about-photo" />
+    <div class="about-links">
+      <a href="mailto:your.email@institution.edu.au" class="about-link">
+        <i class="bi bi-envelope-fill"></i> Email
+      </a>
+      <a href="https://scholar.google.com" class="about-link" target="_blank">
+        <i class="bi bi-mortarboard-fill"></i> Google Scholar
+      </a>
+      <a href="https://orcid.org" class="about-link" target="_blank">
+        <img src="../assets/orcid.svg" class="about-icon-img" alt="ORCID"> ORCID
+      </a>
+      <a href="https://github.com/tkn132" class="about-link" target="_blank">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com" class="about-link" target="_blank">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="../assets/cv.pdf" class="about-link" target="_blank">
+        <i class="bi bi-file-earmark-person-fill"></i> Download CV
+      </a>
+    </div>
+  </div>
+  <div class="about-text-col">
+    <h2>Kim Ngan Tran</h2>
+    <p class="about-role">Computational population geneticist · Brisbane, Australia</p>
+
+    <p>I work at the intersection of population genetics, statistical genomics, and human health — with a particular focus on understanding how genetic diversity shapes disease risk across populations that have historically been underrepresented in genomic research.</p>
+
+    <p>My research uses large-scale genomic data to study population structure, runs of homozygosity, autozygosity, and complex trait architecture in Indigenous Australian and Southeast Asian populations. I'm interested in both the methods and the biology: how do we build tools that work equitably across diverse human populations, and what do those populations tell us about the evolutionary and demographic forces that shaped human genetic variation?</p>
+
+    <p>This blog is where I think out loud about population genetics — methods tutorials, paper commentary, analysis walkthroughs, and occasional opinion pieces. The intended audience is curious scientists and students who want to understand what the field is actually doing.</p>
+
+    <h3>Research interests</h3>
+    <div class="interest-tags">
+      <span class="itag">Population structure</span>
+      <span class="itag">Autozygosity &amp; ROH</span>
+      <span class="itag">GWAS in diverse populations</span>
+      <span class="itag">Admixture</span>
+      <span class="itag">Indigenous genomics</span>
+      <span class="itag">Demographic inference</span>
+    </div>
+
+    <h3>Affiliations</h3>
+    <p>Queensland University of Technology (QUT) · Brisbane, Australia</p>
+  </div>
+</div>
+```

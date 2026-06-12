@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+
+// Autumn palette
+$body-bg: #F5EFE6;
+$body-color: #3D2B1F;
+$link-color: #C4622D;
+$link-hover-color: #8B3A18;
+
+// Typography
+$font-family-sans-serif: 'Inter', system-ui, sans-serif;
+$headings-font-family: 'Lora', Georgia, serif;
+$font-size-root: 17px;
+$line-height-base: 1.75;
+
+// Navbar
+$navbar-bg: #F5EFE6;
+$navbar-fg: #3D2B1F;
+$navbar-hl: #C4622D;
+
+// Spacing
+$spacer: 1rem;
+
+/*-- scss:rules --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
