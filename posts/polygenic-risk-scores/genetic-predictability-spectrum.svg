@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 820" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" role="img" aria-label="The genetic predictability spectrum: a table comparing classic monogenic, high-penetrance Mendelian, large-effect common variant, and polygenic/complex disease across genetic architecture, penetrance, best predictor, predictive ceiling, and ancestry portability.">
+  <defs>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#166a2e"/>
+      <stop offset="28%" stop-color="#4a9c3c"/>
+      <stop offset="52%" stop-color="#8fae2c"/>
+      <stop offset="72%" stop-color="#d1a01e"/>
+      <stop offset="88%" stop-color="#d5711d"/>
+      <stop offset="100%" stop-color="#b3261e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1480" height="820" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="740" y="58" text-anchor="middle" font-size="30" font-weight="700" fill="#1a1a1a">The genetic predictability spectrum</text>
+
+  <!-- Gradient bar -->
+  <rect x="210" y="128" width="1160" height="34" rx="17" fill="url(#spectrum)"/>
+  <g stroke="#ffffff" stroke-width="3" opacity="0.85">
+    <line x1="442" y1="128" x2="442" y2="162"/>
+    <line x1="674" y1="128" x2="674" y2="162"/>
+    <line x1="906" y1="128" x2="906" y2="162"/>
+    <line x1="1138" y1="128" x2="1138" y2="162"/>
+  </g>
+  <text x="210" y="196" font-size="18" font-weight="700" fill="#166a2e">Deterministic</text>
+  <text x="1370" y="196" text-anchor="end" font-size="18" font-weight="700" fill="#b3261e">Probabilistic</text>
+
+  <!-- Column dots -->
+  <circle cx="300" cy="248" r="11" fill="#1f7a34"/>
+  <circle cx="592" cy="248" r="11" fill="#4a9c3c"/>
+  <circle cx="895" cy="248" r="11" fill="#cf9c1c"/>
+  <circle cx="1200" cy="248" r="11" fill="#b3261e"/>
+
+  <!-- Column headers -->
+  <g text-anchor="middle" fill="#1a1a1a" font-size="21" font-weight="700">
+    <text x="300" y="298">Classic monogenic</text>
+    <text x="592" y="298">High-penetrance</text>
+    <text x="592" y="324">Mendelian subset</text>
+    <text x="895" y="298">Large-effect</text>
+    <text x="895" y="324">common variant</text>
+    <text x="1200" y="298">Polygenic / complex</text>
+  </g>
+  <g text-anchor="middle" fill="#6b6b6b" font-size="16.5">
+    <text x="300" y="330">Cystic fibrosis,</text>
+    <text x="300" y="352">Huntington's</text>
+    <text x="592" y="356">BRCA1/2, ADPKD,</text>
+    <text x="592" y="378">ADTKD-UMOD, Alport</text>
+    <text x="895" y="356">APOL1 nephropathy,</text>
+    <text x="895" y="378">APOE-e4 (Alzheimer's)</text>
+    <text x="1200" y="330">CVD/CAD, T2D,</text>
+    <text x="1200" y="352">polygenic CKD,</text>
+    <text x="1200" y="374">sporadic breast cancer</text>
+  </g>
+
+  <!-- Row dividers -->
+  <g stroke="#e2e2e2" stroke-width="1.2">
+    <line x1="40" y1="410" x2="1440" y2="410"/>
+    <line x1="40" y1="484" x2="1440" y2="484"/>
+    <line x1="40" y1="558" x2="1440" y2="558"/>
+    <line x1="40" y1="626" x2="1440" y2="626"/>
+    <line x1="40" y1="694" x2="1440" y2="694"/>
+    <line x1="40" y1="762" x2="1440" y2="762"/>
+  </g>
+
+  <!-- Row labels -->
+  <g text-anchor="end" fill="#2b2b2b" font-size="16" font-weight="700">
+    <text x="195" y="453">Genetic architecture</text>
+    <text x="195" y="527">Penetrance</text>
+    <text x="195" y="601">Best predictor</text>
+    <text x="195" y="665">Predictive ceiling</text>
+    <text x="195" y="737">Ancestry portability</text>
+  </g>
+
+  <!-- Row 1: Genetic architecture -->
+  <g text-anchor="middle" fill="#333333" font-size="16.5">
+    <text x="300" y="453">Single gene</text>
+    <text x="592" y="442">Rare large-effect</text>
+    <text x="592" y="464">+ modifiers</text>
+    <text x="895" y="442">Common variant,</text>
+    <text x="895" y="464">big effect + trigger</text>
+    <text x="1200" y="442">Thousands of</text>
+    <text x="1200" y="464">small effects</text>
+  </g>
+
+  <!-- Row 2: Penetrance -->
+  <text x="300" y="522" text-anchor="middle" font-size="17" font-weight="700" fill="#2e7d32">~100%</text>
+  <text x="592" y="515" text-anchor="middle" font-size="17" font-weight="700" fill="#2e7d32">High, incomplete</text>
+  <text x="592" y="537" text-anchor="middle" font-size="15" fill="#6b6b6b">(BRCA ~72%)</text>
+  <text x="895" y="522" text-anchor="middle" font-size="17" font-weight="700" fill="#c99700">Moderate, trigger-dep.</text>
+  <text x="1200" y="522" text-anchor="middle" font-size="17" font-weight="700" fill="#b3261e">N/A (continuous)</text>
+
+  <!-- Row 3: Best predictor -->
+  <g text-anchor="middle" fill="#333333" font-size="16.5">
+    <text x="300" y="601">Single-gene test</text>
+    <text x="592" y="590">Rare variant +</text>
+    <text x="592" y="612">PRS modifier</text>
+    <text x="895" y="590">Genotype as its</text>
+    <text x="895" y="612">own locus</text>
+    <text x="1200" y="590">PRS, integrated</text>
+    <text x="1200" y="612">w/ clinical factors</text>
+  </g>
+
+  <!-- Row 4: Predictive ceiling -->
+  <text x="300" y="665" text-anchor="middle" font-size="17" font-weight="700" fill="#2e7d32">Near-diagnostic</text>
+  <text x="592" y="665" text-anchor="middle" font-size="17" font-weight="700" fill="#2e7d32">Strong risk estimate</text>
+  <text x="895" y="665" text-anchor="middle" font-size="17" font-weight="700" fill="#c99700">Useful, conditional</text>
+  <text x="1200" y="665" text-anchor="middle" font-size="17" font-weight="700" fill="#b3261e">Incremental only</text>
+
+  <!-- Row 5: Ancestry portability -->
+  <g text-anchor="middle" fill="#333333" font-size="16.5">
+    <text x="300" y="726">High (variant is</text>
+    <text x="300" y="748">causal)</text>
+    <text x="592" y="726">Variant transfers;</text>
+    <text x="592" y="748">modifier-PRS less so</text>
+  </g>
+  <text x="895" y="726" text-anchor="middle" font-size="16.5" fill="#b3261e">Ancestry-specific</text>
+  <text x="895" y="748" text-anchor="middle" font-size="16.5" fill="#b3261e">(APOL1: W. African)</text>
+  <text x="1200" y="726" text-anchor="middle" font-size="16.5" fill="#b3261e">Poor — main</text>
+  <text x="1200" y="748" text-anchor="middle" font-size="16.5" fill="#b3261e">limitation</text>
+</svg>
