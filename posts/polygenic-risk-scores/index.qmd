@@ -1,6 +1,6 @@
 ---
 title: "What a polygenic risk score can and can't tell you"
-date: "2026-07-10"
+date: "2026-04-01"
 description: "Why 'find the mutation, know the risk' works for BRCA but quietly breaks down for common disease — and what a polygenic risk score actually gives you."
 categories: [PRS, complex traits, opinion]
 image: "genetic-predictability-spectrum.svg"
@@ -47,7 +47,7 @@ BRCA and a polygenic risk score sit at opposite ends of the same spectrum. BRCA 
 
 The key idea is that predictability depends on how concentrated the genetic effect is, not on how "genetic" a disease is. A disease can be strongly heritable and still be hard to predict, because that heritability is scattered across thousands of tiny pieces that no single number captures cleanly.
 
-Used well, a PRS is a calibrated probability that can meaningfully move a decision.
+A PRS is a calibrated probability that can meaningfully move a decision.
 
 ## References
 

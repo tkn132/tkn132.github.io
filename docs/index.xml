@@ -48,5 +48,76 @@
   <pubDate>Thu, 11 Jun 2026 14:00:00 GMT</pubDate>
   <media:content url="https://tkn132.github.io/posts/welcome/banner.png" medium="image" type="image/png"/>
 </item>
+<item>
+  <title>What a polygenic risk score can and can’t tell you</title>
+  <link>https://tkn132.github.io/posts/polygenic-risk-scores/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Most of us carry a simple mental model of genetic testing: find the mutation, know the risk. For a small set of diseases that model holds. For the far larger set of common diseases, it quietly breaks down, and the reason it breaks down is worth understanding before you ever look at a risk number.</p>
+<section id="starting-with-the-case-that-works" class="level2">
+<h2 class="anchored" data-anchor-id="starting-with-the-case-that-works">Starting with the case that works</h2>
+<p>Take BRCA1. You have probably seen a figure like “a BRCA1 mutation carries about a 72 percent lifetime risk of breast cancer.” That number is real. It comes from large studies that followed thousands of carriers forward in time and used survival analysis to estimate cumulative risk to a given age<span class="citation" data-cites="kuchenbaecker2017"><sup>1</sup></span>.</p>
+<p>BRCA works as a predictor for a specific reason: it is a single gene with a large effect. The mutation is identified, it is causal, and it points at something real and specific about the person carrying it. Even here the number is a population average with meaningful spread around it, but the prediction has a solid anchor. This is the friendly end of genetics, where one variant does most of the explaining.</p>
+<p>Most common diseases do not look like this. Heart disease, type 2 diabetes, and the like are not driven by one large-effect gene. They are driven by thousands of tiny genetic contributions plus environment, behaviour, and age. To say anything genetic about risk in those diseases, you need a different tool. That tool is the polygenic risk score.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://tkn132.github.io/posts/polygenic-risk-scores/genetic-predictability-spectrum.svg" class="img-fluid figure-img"></p>
+<figcaption>The genetic predictability spectrum. Predictability depends on how concentrated the genetic effect is — from single causal variants at the deterministic end to thousands of small effects at the probabilistic end.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-a-prs-actually-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-prs-actually-is">What a PRS actually is</h2>
+<p>A polygenic risk score is a weighted sum of many small genetic effects. Genome-wide association studies find variants that nudge risk up or down by a tiny amount each, and a PRS adds them all together into a single number that places you somewhere on a population distribution.</p>
+<p>PRS was not originally built to predict anyone’s disease. The method that established the modern PRS, a 2009 schizophrenia study<span class="citation" data-cites="purcell2009"><sup>2</sup></span>, used it as a research instrument. The goal was to prove that a trait was polygenic at all, and to test whether different disorders shared genetic architecture. Predicting individual risk was not the point, and the accuracy for any single person was deliberately beside the point. Individual prediction came later, once study sizes grew large enough that the scores carried real signal.</p>
+</section>
+<section id="what-a-prs-can-tell-you" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-prs-can-tell-you">What a PRS can tell you</h2>
+<p>It gives you a real position in a distribution. Your score is your score, and being in the top slice of the distribution does correspond to elevated risk on average. In diseases like coronary artery disease, large prospective studies have shown that people in the highest PRS group face substantially higher risk than the middle of the distribution, and that this holds up when you follow people forward and count who actually develops disease<span class="citation" data-cites="khera2018"><sup>3</sup></span>.</p>
+<p>It adds information on top of what clinicians already measure. The most defensible use of a PRS is not on its own but folded in alongside age, blood pressure, cholesterol, family history, and other established factors. It contributes something those factors miss, and that increment can be enough to shift a real decision, such as starting a medication earlier or screening someone sooner.</p>
+</section>
+<section id="what-a-prs-cant-tell-you" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-prs-cant-tell-you">What a PRS can’t tell you</h2>
+<p>It is a ranking, not a diagnosis. Unlike a BRCA result, there is no clean carrier or non-carrier. A PRS is a smooth gradient, and the “top 1 percent” cutoff that produces scary headlines is an arbitrary line drawn through a continuous distribution. Someone just above the line and someone just below it are barely different.</p>
+<p>Its absolute numbers are fragile. A PRS can rank people reasonably well while still getting the absolute risk figure wrong, because that figure depends on the score being properly calibrated to the population you are applying it to.</p>
+<p>And this is the largest limitation: PRS often does not transfer well across ancestries<span class="citation" data-cites="martin2019"><sup>4</sup></span>. Because most of the underlying studies were done in people of European ancestry, a score built there can lose much of its accuracy when applied to people of African, East Asian, or other backgrounds. A risk number that looks precise can simply be miscalibrated for the person in front of you. This is an active area of work, with multi-ancestry studies trying to close the gap, but it remains the central caution.</p>
+</section>
+<section id="the-takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="the-takeaway">The takeaway</h2>
+<p>BRCA and a polygenic risk score sit at opposite ends of the same spectrum. BRCA is one large-effect gene, and its prediction is anchored and close to diagnostic. A PRS is thousands of small effects summed together, and its prediction is a probability, not a destiny.</p>
+<p>The key idea is that predictability depends on how concentrated the genetic effect is, not on how “genetic” a disease is. A disease can be strongly heritable and still be hard to predict, because that heritability is scattered across thousands of tiny pieces that no single number captures cleanly.</p>
+<p>A PRS is a calibrated probability that can meaningfully move a decision.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2">
+<div id="ref-kuchenbaecker2017" class="csl-entry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Kuchenbaecker, K. B. <em>et al.</em> <a href="https://doi.org/10.1001/jama.2017.7112">Risks of breast, ovarian, and contralateral breast cancer for <span>BRCA1</span> and <span>BRCA2</span> mutation carriers</a>. <em>JAMA</em> <strong>317</strong>, 2402–2416 (2017).</div>
+</div>
+<div id="ref-purcell2009" class="csl-entry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Purcell, S. M. <em>et al.</em> <a href="https://doi.org/10.1038/nature08185">Common polygenic variation contributes to risk of schizophrenia and bipolar disorder</a>. <em>Nature</em> <strong>460</strong>, 748–752 (2009).</div>
+</div>
+<div id="ref-khera2018" class="csl-entry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Khera, A. V. <em>et al.</em> <a href="https://doi.org/10.1038/s41588-018-0183-z">Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations</a>. <em>Nature Genetics</em> <strong>50</strong>, 1219–1224 (2018).</div>
+</div>
+<div id="ref-martin2019" class="csl-entry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Martin, A. R. <em>et al.</em> <a href="https://doi.org/10.1038/s41588-019-0379-x">Clinical use of current polygenic risk scores may exacerbate health disparities</a>. <em>Nature Genetics</em> <strong>51</strong>, 584–591 (2019).</div>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>PRS</category>
+  <category>complex traits</category>
+  <category>opinion</category>
+  <guid>https://tkn132.github.io/posts/polygenic-risk-scores/</guid>
+  <pubDate>Tue, 31 Mar 2026 14:00:00 GMT</pubDate>
+  <media:content url="https://tkn132.github.io/posts/polygenic-risk-scores/genetic-predictability-spectrum.svg" medium="image" type="image/svg+xml"/>
+</item>
 </channel>
 </rss>
