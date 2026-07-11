@@ -1,7 +1,7 @@
 ---
 title: "What a polygenic risk score can and can't tell you"
 date: "2026-04-01"
-description: "Why 'find the mutation, know the risk' works for BRCA but quietly breaks down for common disease — and what a polygenic risk score actually gives you."
+description: "Most of us carry a simple mental model of genetic testing: find the mutation, know the risk. For a small set of diseases that model holds. For the far larger set of common diseases, it is much more complicated."
 categories: [PRS, complex traits, opinion]
 image: "genetic-predictability-spectrum.svg"
 image-alt: "The genetic predictability spectrum: monogenic to polygenic disease across architecture, penetrance, best predictor, predictive ceiling, and ancestry portability."
@@ -9,17 +9,15 @@ bibliography: references.bib
 csl: https://www.zotero.org/styles/nature
 ---
 
-Most of us carry a simple mental model of genetic testing: find the mutation, know the risk. For a small set of diseases that model holds. For the far larger set of common diseases, it quietly breaks down, and the reason it breaks down is worth understanding before you ever look at a risk number.
-
 ## Starting with the case that works
 
-Take BRCA1. You have probably seen a figure like "a BRCA1 mutation carries about a 72 percent lifetime risk of breast cancer." That number is real. It comes from large studies that followed thousands of carriers forward in time and used survival analysis to estimate cumulative risk to a given age [@kuchenbaecker2017].
+Take BRCA1. You have probably seen a figure like "a BRCA1 mutation carries about a 72 percent lifetime risk of breast cancer." That number comes from large studies that followed thousands of carriers forward in time and used survival analysis to estimate cumulative risk to a given age [@kuchenbaecker2017].
 
-BRCA works as a predictor for a specific reason: it is a single gene with a large effect. The mutation is identified, it is causal, and it points at something real and specific about the person carrying it. Even here the number is a population average with meaningful spread around it, but the prediction has a solid anchor. This is the friendly end of genetics, where one variant does most of the explaining.
+BRCA works as a predictor for a specific reason: it is a single gene with a large effect. The mutation is identified, it is causal, and it points at something specific about the person carrying it. This is the friendly end of genetics, where one variant does most of the explaining.
 
-Most common diseases do not look like this. Heart disease, type 2 diabetes, and the like are not driven by one large-effect gene. They are driven by thousands of tiny genetic contributions plus environment, behaviour, and age. To say anything genetic about risk in those diseases, you need a different tool. That tool is the polygenic risk score.
+Most common diseases do not look like this. Heart disease, type 2 diabetes, and the like are not driven by one large-effect gene. They are driven by thousands of tiny genetic contributions plus environment, behavior, and age. To say anything genetic about risk in those diseases, you need a different tool. That tool is the polygenic risk score.
 
-![The genetic predictability spectrum. Predictability depends on how concentrated the genetic effect is — from single causal variants at the deterministic end to thousands of small effects at the probabilistic end.](genetic-predictability-spectrum.svg)
+![The genetic predictability spectrum. The key idea is that predictability depends on how concentrated the genetic effect is, not on how "genetic" a disease is. A disease can be strongly heritable and still be hard to predict, because that heritability is scattered across thousands of tiny pieces that no single number captures cleanly.](genetic-predictability-spectrum.svg)
 
 ## What a PRS actually is
 
@@ -35,7 +33,7 @@ It adds information on top of what clinicians already measure. The most defensib
 
 ## What a PRS can't tell you
 
-It is a ranking, not a diagnosis. Unlike a BRCA result, there is no clean carrier or non-carrier. A PRS is a smooth gradient, and the "top 1 percent" cutoff that produces scary headlines is an arbitrary line drawn through a continuous distribution. Someone just above the line and someone just below it are barely different.
+It is a ranking, not a diagnosis. Unlike a BRCA result, there is no clean carrier or non-carrier. A PRS is a smooth gradient, and the "top 1 percent" cutoff is an arbitrary line drawn through a continuous distribution. Someone just above the line and someone just below it are barely different.
 
 Its absolute numbers are fragile. A PRS can rank people reasonably well while still getting the absolute risk figure wrong, because that figure depends on the score being properly calibrated to the population you are applying it to.
 
@@ -44,8 +42,6 @@ And this is the largest limitation: PRS often does not transfer well across ance
 ## The takeaway
 
 BRCA and a polygenic risk score sit at opposite ends of the same spectrum. BRCA is one large-effect gene, and its prediction is anchored and close to diagnostic. A PRS is thousands of small effects summed together, and its prediction is a probability, not a destiny.
-
-The key idea is that predictability depends on how concentrated the genetic effect is, not on how "genetic" a disease is. A disease can be strongly heritable and still be hard to predict, because that heritability is scattered across thousands of tiny pieces that no single number captures cleanly.
 
 A PRS is a calibrated probability that can meaningfully move a decision.
 
